@@ -18,12 +18,13 @@ class App extends Component {
     // score
   }
 
+  
    randomize = pics => {
-    pics
-      .map(a => [Math.random(), a])
+     
+   const newpics = pics.map(a => [Math.random(), a])
       .sort((a, b) => a[0] - b[0])
       .map(a => a[1]);
-      this.setState({ pics });
+      this.setState({ pics:newpics });
    };
 
 
