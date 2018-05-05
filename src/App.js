@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg'; 
-import Navbar from './component/Navbar';
-import Header from './component/Header';
-import Container from './component/Container';
-import Box from './component/Box';
-import Footer from './component/Footer';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import Container from './components/Container';
+import Box from './components/Box';
+import Footer from './components/Footer';
+import pics from "./pics.json";
 
-const pics = ["http://via.placeholder.com/350x150", "http://via.placeholder.com/350x250"];
 const count = 0;
 
 // any Class = a stateful component
@@ -17,6 +17,16 @@ class App extends Component {
     pics 
     // score
   }
+
+   randomize = pics => {
+    pics
+      .map(a => [Math.random(), a])
+      .sort((a, b) => a[0] - b[0])
+      .map(a => a[1]);
+      this.setState({ pics });
+   };
+
+
 
   render() {
     //all stateful components have render function
@@ -29,7 +39,10 @@ class App extends Component {
         <Container >
         {this.state.pics.map(pic => (
           <Box
-            image = {pic} //when passing an object use dot notation to pick correct part of object
+            key = {pic.id}
+            image = {pic.image} //when passing an object use dot notation to pick correct part of object
+            onclick = {this.randomize}
+            array = {pics}
           />
         ))}
         </Container>

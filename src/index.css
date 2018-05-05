@@ -204,6 +204,10 @@ body {
   transition: .1s
 }
 
+.click-item-image{
+    width:100%;
+    height:100%;
+}
 .shake {
   -webkit-animation: shake .5s .0125s;
   animation: shake .5s .0125s
