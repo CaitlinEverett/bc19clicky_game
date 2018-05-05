@@ -18,9 +18,8 @@ class App extends Component {
     // score
   }
 
-  
+  //randomizes the pictures on click
    randomize = pics => {
-     
    const newpics = pics.map(a => [Math.random(), a])
       .sort((a, b) => a[0] - b[0])
       .map(a => a[1]);
