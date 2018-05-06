@@ -4,11 +4,11 @@ A Memory Game
 
 ## Installation
 
-There is no installation - play this on heroku. 
+There is no installation - play this on heroku.
 
 ## Usage
 
-Click on the boxes - challenge yourself to remember which boxes you have clicked on.   
+Click on the boxes - challenge yourself to remember which boxes you have clicked on.
 
 ## Contributing
 
