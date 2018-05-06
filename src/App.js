@@ -44,7 +44,10 @@ class App extends Component {
         if(this.state.score > this.state.topScore) {
           this.setState({ topScore: this.state.score });
         }
-        this.setState({ 'score': 0});
+        this.setState({ 
+          'score': 0, 
+          'clicked' : []
+        });
       } else {
         let { clicked, score } = this.state;
         console.log(clicked);
